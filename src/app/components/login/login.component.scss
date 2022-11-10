@@ -1,0 +1,21 @@
+.container{
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid #dadce0;
+    border-radius: 8px;    
+    min-height: 500px;
+    position:absolute;
+    width:446px;
+    padding-left: 40px;
+    padding-top:48px;
+    padding-right: 40px;
+    padding-bottom: 36px;
+    margin-left: 25%;
+    margin-top: 8%;
+}
+.forget-link{
+    margin-top: -10px; 
+    color: #1a73e8;
+    padding-top: 5px;
+    font-size: 14px;
+}
