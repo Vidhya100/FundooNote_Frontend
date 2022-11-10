@@ -1,5 +1,5 @@
-<div class="Container main">
-  <div class="left-side">
+<div class="Container main" fxLayout="row" fxLayoutAlign="space-evenly center">
+  <div class="left-side" fxLayout="column" fxLayoutAlign="center">
       <!---Logo-->
       <div class="Logo-name">
           <h1>
@@ -10,12 +10,12 @@
               <span style="color: red;">o</span>
               <span style="color: blue;">o</span>
           </h1>
-          <h2 class="heading">Create your FundooNote Account</h2>
+          <h1 class="heading">Create your FundooNote Account</h1>
       </div>
 
       <div class="creadentials">
           <!---full name-->
-          <div class="full_name">                
+          <div class="full_name" fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="20px">                
                   <mat-form-field appearance="outline">
                     <mat-label>First Name</mat-label>
                     <input matInput placeholder="">                      
@@ -28,9 +28,9 @@
           </div>
 
           <!---username-->
-          <div class="username" >  
+          <div class="username" fxLayout="column" fxLayoutAlign=" stretch">  
               
-                  <mat-form-field appearance="outline" style="width:27.5vw">
+                  <mat-form-field appearance="outline" >
                       <mat-label>Email</mat-label>
                       <input matInput placeholder="">  
                       <mat-error>Enter valid email</mat-error>                    
@@ -38,9 +38,9 @@
                   </mat-form-field>
                 
           </div>
-          <a class="a-class">Use my current email address instead</a>
+          <a class="a-class" >Use my current email address instead</a>
           <!---password-->
-          <div class="password-details">                
+          <div class="password-details" fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="20px">                
                   <mat-form-field appearance="outline" style="padding-bottom: 0px !important;">
                     <mat-label>Password</mat-label>
                     <input matInput placeholder="Placeholder"> 
