@@ -46,19 +46,55 @@ body{
 .username{
     padding-top: 0 px;
 }
+
+.hint{    
+        font-size: 13px;   
+}
+.a-class{
+    color:#1a73e8;
+    font-weight: 500;
+    margin-top:28px;
+}
+.password-details{
+    margin-top:28px;
+    
+}
+.checkbox{
+    margin-top: 50px;
+}
 .image-content{
     margin: 72px,4px,0 ;
     text-align: center;
 }
 img{
-    margin-top: 30px;
+    margin-top: 60px;
     height: 244px;
     width:244px;
 }
 .text{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300px;
     text-align: center;
+    box-sizing: inherit;
+}
+.submit-button{
+    padding-top: 40px;
+}
+.signin-link{
+    font-weight: bold; 
+    border: none;
+    color:#1a73e8;
+}
+.next-btn{
+    background-color: #1a73e8;
+    height:33px;
+    width:80px;
+    border-radius: 3px;
+    font-size: 15px; 
+    text-align: center;
+    color: white ;
+    border: none; 
+    float: right;
 }
 .right-side{
     box-sizing: border-box;
