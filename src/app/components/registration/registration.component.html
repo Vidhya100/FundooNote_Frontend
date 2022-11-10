@@ -13,6 +13,7 @@
           <h1 class="heading">Create your FundooNote Account</h1>
       </div>
 
+       <!---form [formGroup]="forgetPasswordForm" fxFlex="95" (ngSubmit)="onSubmit()"--->
       <div class="creadentials">
           <!---full name-->
           <div class="full_name" fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="20px">                
@@ -26,7 +27,7 @@
                     <input matInput placeholder="">                     
                   </mat-form-field>                  
           </div>
-
+        
           <!---username-->
           <div class="username" fxLayout="column" fxLayoutAlign=" stretch">  
               
@@ -65,7 +66,7 @@
               <a class="signin-link" mat-button href="https://www.google.com/" target="_blank" routerLink="/login">Sign in instead</a>
               <button class="next-btn" mat-raised-button >Next</button>
           </div>
-
+        <!---/form-->
       </div>
   </div>
   <div class="right-side">

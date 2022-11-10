@@ -1,5 +1,6 @@
 <div class="container">
     <!---header-->
+        <!---form [formGroup]="forgetPasswordForm" fxFlex="95" (ngSubmit)="onSubmit()"--->
     <div class="header" fxLayout="column" fxLayoutAlign="space-around center">
         <!---Logo-->
         <div class="Logo-name">
@@ -32,6 +33,7 @@
         </mat-form-field>
         <a class="forget-link" routerLink="/forget-password">Forget Password?</a>
     </div>
+    <!---/form-->
     <!---Suggestion-->
     <div class="suggestion" fxLayput="column">
         <mat-hint class="hint1">Not your computer? Use Guest mode to sign in privately.</mat-hint>
