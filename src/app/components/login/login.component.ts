@@ -16,12 +16,10 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.formBuilder.group
     ({
      
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
       
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required]
+      password: ['', [Validators.required, Validators.minLength(6)]]
+      
       
   } );
   }

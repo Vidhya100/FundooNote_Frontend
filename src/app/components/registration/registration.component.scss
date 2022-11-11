@@ -13,9 +13,9 @@ body{
     box-sizing: border-box;
     border: 1px solid #dadce0;
     border-radius: 8px;    
-    min-height: 500px;
-    //position:absolute;
-    width:760px;
+    //min-height: 500px;
+    position:absolute;
+    //width:760px;
     padding-left: 40px;
     padding-top:48px;
     padding-right: 40px;
@@ -53,10 +53,6 @@ body{
 .hint,.hint1{    
         font-size: 13px;   
 }
-/*
-.hint1{
-    margin-top: -18px;
-}*/
 .mat-form-field-paasword .mat-form-field-wrapper{
     padding-bottom: 0px;
 }
