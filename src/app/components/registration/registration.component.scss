@@ -15,7 +15,7 @@ body{
     border-radius: 8px;    
     //min-height: 500px;
     position:absolute;
-    //width:760px;
+    width:760px;
     padding-left: 40px;
     padding-top:48px;
     padding-right: 40px;
@@ -50,12 +50,10 @@ body{
     margin-bottom: 35px;
 }
 
-.hint,.hint1{    
+.hint{    
         font-size: 13px;   
 }
-.mat-form-field-paasword .mat-form-field-wrapper{
-    padding-bottom: 0px;
-}
+
 .a-class{
     color:#1a73e8;
     font-weight: 500;
@@ -93,6 +91,7 @@ img{
 .submit-button{
     padding-top: 40px;
 }
+
 .signin-link{
     font-weight: bold; 
     border: none;
