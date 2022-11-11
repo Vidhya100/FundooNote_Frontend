@@ -1,6 +1,6 @@
 <div class="container">
     <!---header-->
-        <!---form [formGroup]="forgetPasswordForm" fxFlex="95" (ngSubmit)="onSubmit()"--->
+    <form [formGroup]="loginForm"  (ngSubmit)="onSubmit()">
     <div class="header" fxLayout="column" fxLayoutAlign="space-around center">
         <!---Logo-->
         <div class="Logo-name">
@@ -21,19 +21,19 @@
     <div class="Email">
         <mat-form-field appearance="outline" style="width:23vw">
             <mat-label>Email</mat-label>
-            <input matInput placeholder="">  
+            <input matInput formControlName="email" placeholder="">  
             <mat-error>Enter valid email</mat-error>          
         </mat-form-field>
         
 
         <mat-form-field appearance="outline" style="width:23vw">
             <mat-label>Password</mat-label>
-            <input matInput placeholder="">  
+            <input matInput formControlName="email" placeholder="">  
             <mat-error>Enter valid email</mat-error>                    
         </mat-form-field>
         <a class="forget-link" routerLink="/forget-password">Forget Password?</a>
     </div>
-    <!---/form-->
+    </form>
     <!---Suggestion-->
     <div class="suggestion" fxLayput="column">
         <mat-hint class="hint1">Not your computer? Use Guest mode to sign in privately.</mat-hint>

@@ -6,6 +6,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -20,7 +21,8 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     RegistrationComponent,
     LoginComponent,
     ForgetPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
