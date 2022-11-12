@@ -14,7 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
-import { SigninComponent } from './components/signin/signin.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { SigninComponent } from './components/signin/signin.component';
     LoginComponent,
     ForgetPasswordComponent,
     ResetPasswordComponent,
-    SigninComponent,
+    
     
   ],
   imports: [
@@ -34,7 +35,8 @@ import { SigninComponent } from './components/signin/signin.component';
     MatInputModule,
     MatCheckboxModule,
     FlexLayoutModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
