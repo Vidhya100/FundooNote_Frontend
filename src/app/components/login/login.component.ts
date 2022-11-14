@@ -30,7 +30,7 @@ onSubmit() {
   this.submitted = true;
 
   // stop here if form is invalid
-  if (this.loginForm.invalid) {
+  if (this.loginForm.valid) {
       let payload = {
         email: this.loginForm.value.email,
         password: this.loginForm.value.password,
@@ -38,6 +38,8 @@ onSubmit() {
       }
        this.user.login(payload).subscribe((response:any)=>{
         console.log(response)
+
+        localStorage.setItem("token",response.data)
       })
   }
 }

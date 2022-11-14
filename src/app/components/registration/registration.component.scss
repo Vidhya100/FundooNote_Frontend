@@ -7,6 +7,7 @@ body{
     font-size: 14px;
     line-height: 1.42;
     overflow-y: hidden;
+   
 }
 .Container{
     display: block;
@@ -107,6 +108,7 @@ img{
     color: white ;
     border: none; 
     float: right;
+    cursor: pointer;
 }
 .right-side{
     box-sizing: border-box;
