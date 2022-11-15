@@ -38,7 +38,7 @@ onSubmit() {
       }
        this.user.login(payload).subscribe((response:any)=>{
         console.log(response)
-
+         //added for storing token locally
         localStorage.setItem("token",response.data)
       })
   }

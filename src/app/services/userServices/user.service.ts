@@ -40,7 +40,7 @@ export class UserService {
           //Authorization : 'token' 
         })
     }
-    return this.httpService.postService('/User/ForgetPasword?email=vighneshmundhe7%40gmail.com',reqdata,false,header)
+    return this.httpService.postService('/User/ForgetPasword?email='+(reqdata.email),reqdata,false,header)
   }
 
   resetPassword(reqdata:any){

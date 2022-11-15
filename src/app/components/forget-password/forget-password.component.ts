@@ -34,9 +34,10 @@ onSubmit() {
       email: this.forgetPasswordForm.value.email,
       service : "advance" 
     }
+    console.log(payload);
      this.user.forgetPassword(payload).subscribe((response:any)=>{
       console.log(response)
-
+      //added for storing token locally
       localStorage.setItem("token",response.data)
     })
   }
