@@ -1,10 +1,10 @@
 <div class="main-container"  fxLayout="column">
     <!---header-->
-    <div class="header" fxLayout="row" fxLayoutAlign="start center">
+    <div class="header" fxLayout="row" fxLayoutAlign="start">
         <!---header-->
-        <div class="left-side" fxLayout="row" fxLayoutAlign="space-around center">
-            <img src="../../../assets/menu.png"/>
-            <img src="../../../assets/note-icon.png">
+        <div class="left-side" fxLayout="row" fxLayoutAlign="space-around">
+            <img class="menu" src="../../../assets/menu.png">
+            <img class="note-icon" src="../../../assets/note-icon.png">
             <div class="project-name">
                 <h1>
                     <span style="color: blue;">F</span>
@@ -16,24 +16,25 @@
                 </h1>
             </div>
         </div>
-
-        <form class="submit">
-            <button type="submit">Search</button>
-            <input class="submit" type="search" placeholder="Search...">
-        </form>
-
-        <div class="left-side">
-            <img src="../../../assets/refresh.png">
-            <img src="../../../assets/view_list.png" alt="list-menu">
-            <img src="../../../assets/settings.png">
+        <div class="middle"  fxLayout="row" fxLayoutAlign="space-evenly">
+            <form class="search-submit">
+                <button type="submit" class="search-button">Search</button>
+                <input class="search" type="search" placeholder="Search...">
+            </form>
+                <img class="refresh-btn" src="../../../assets/refresh.png">
+                <img class="view-list-btn" src="../../../assets/view.png" alt="list-menu">
+                <img class="settings-btn" src="../../../assets/settings.png">
+           
         </div>
-        <div class="account">
-            <img src="../../../assets/apps.png">
-            <img src="../../../assets/account_circle.png">
+        <div class="account"  fxLayout="row" fxLayoutAlign="space-between">
+            <img class="apps" src="../../../assets/apps.png">
+            <img class="acoount-image" src="../../../assets/account_circle.png">
         </div>
         
     </div>
     <hr>
     <!---lower-body-->
-    <div class="body"></div>
+    <div class="body">
+        <p>text</p>
+    </div>
 </div>
