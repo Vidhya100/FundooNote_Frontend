@@ -2,14 +2,10 @@
     <!---header-->
     <div class="header" fxLayout="row" fxLayoutAlign="start center">
         <!---header-->
-        <div class="left-side" fxLayout="row" fxLayoutAlign="space-evenly center">
-            <div class="menu_bar">
-                <img class="menu" src="../../../assets/bars-solid.svg">
-            </div>
-            <div class="fundoo_img">
-                <img src="../../../assets/note-icon.png">
-            </div>
-            <div class="fundoo_name">
+        <div class="left-side" fxLayout="row" fxLayoutAlign="space-around center">
+            <img src="../../../assets/menu.png"/>
+            <img src="../../../assets/note-icon.png">
+            <div class="project-name">
                 <h1>
                     <span style="color: blue;">F</span>
                     <span style="color: red;">u</span>
@@ -20,24 +16,24 @@
                 </h1>
             </div>
         </div>
-        <!---header-->
-        <div class="search" fxLayoutAlign="center center">
-            
-        </div>
-        <!---header-->
-        <div class="right-side" fxLayout="row" fxLayoutAlign="space-evenly center">
-            <div class="refresh-arrow">
-               <img src="../../../assets/Refresh.png">
-            </div>
-            <div class="list-menu-btn">
-                <i class="fa-thin fa-square-list" class="list-menu"></i>
-            </div>
-            <div class="settings" class="settings">
-                <img src="../../../assets/settingicon.png">
-            </div>
-        </div>
-    </div>
 
+        <form class="submit">
+            <button type="submit">Search</button>
+            <input class="submit" type="search" placeholder="Search...">
+        </form>
+
+        <div class="left-side">
+            <img src="../../../assets/refresh.png">
+            <img src="../../../assets/view_list.png" alt="list-menu">
+            <img src="../../../assets/settings.png">
+        </div>
+        <div class="account">
+            <img src="../../../assets/apps.png">
+            <img src="../../../assets/account_circle.png">
+        </div>
+        
+    </div>
+    <hr>
     <!---lower-body-->
     <div class="body"></div>
 </div>
