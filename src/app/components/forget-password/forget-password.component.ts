@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/services/userServices/user.service';
 
 @Component({
@@ -11,8 +12,9 @@ export class ForgetPasswordComponent implements OnInit {
 
   forgetPasswordForm!: FormGroup;
     submitted = false;
-
-    constructor(private formBuilder: FormBuilder, private user : UserService) { }
+    token: any;
+    
+    constructor(private formBuilder: FormBuilder, private user : UserService, private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.forgetPasswordForm = this.formBuilder.group
@@ -34,6 +36,7 @@ onSubmit() {
       email: this.forgetPasswordForm.value.email,
       service : "advance" 
     }
+    this.token = this.activeRoute.snapshot.paramMap.get('taken');
     console.log(payload);
      this.user.forgetPassword(payload).subscribe((response:any)=>{
       console.log(response)
