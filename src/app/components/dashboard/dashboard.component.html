@@ -1,40 +1,63 @@
-<div class="main-container"  fxLayout="column">
-    <!---header-->
-    <div class="header" fxLayout="row" fxLayoutAlign="start">
-        <!---header-->
-        <div class="left-side" fxLayout="row" fxLayoutAlign="space-around">
-            <img class="menu" src="../../../assets/menu.png">
-            <img class="note-icon" src="../../../assets/note-icon.png">
-            <div class="project-name">
-                <h1>
-                    <span style="color: blue;">F</span>
-                    <span style="color: red;">u</span>
-                    <span style="color: yellow;">n</span>
-                    <span style="color: green;">d</span>
-                    <span style="color: red;">o</span>
-                    <span style="color: blue;">o</span>
-                </h1>
-            </div>
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar class="example-toolbar" flexLayout="row" fxLayoutAlign="space-between center" >
+        <div flexLayout="row" fxLayoutAlign="space-between center">
+            <button mat-icon-button (click)="snav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <img class="project-name" src="../../../assets/note-icon.png">
+            <h1 class="example-app-name">
+                <span style="color: blue;">F</span>
+                <span style="color: red;">u</span>
+                <span style="color: yellow;">n</span>
+                <span style="color: green;">d</span>
+                <span style="color: red;">o</span>
+                <span style="color: blue;">o</span>
+            </h1>
         </div>
-        <div class="middle"  fxLayout="row" fxLayoutAlign="space-evenly">
-            <form class="search-submit">
-                <button type="submit" class="search-button">Search</button>
-                <input class="search" type="search" placeholder="Search...">
-            </form>
+
+        <div class="middle" fxLayout="row" fxLayoutGap="250px">
+            <div>
+                <form class="search-submit">
+                    <button type="submit" class="search-button">Search</button>
+                    <input class="search" type="search" placeholder="Search...">
+                </form>
+            </div>
+            <div class="3-btn" fxLayout="row" fxLayoutGap="40px">
                 <img class="refresh-btn" src="../../../assets/refresh.png">
                 <img class="view-list-btn" src="../../../assets/view.png" alt="list-menu">
                 <img class="settings-btn" src="../../../assets/settings.png">
-           
+            </div>
         </div>
-        <div class="account"  fxLayout="row" fxLayoutAlign="space-between">
+
+        <div class="account" fxLayout="row" fxLayoutGap="15px">
             <img class="apps" src="../../../assets/apps.png">
             <img class="acoount-image" src="../../../assets/account_circle.png">
         </div>
-        
-    </div>
-    <hr>
-    <!---lower-body-->
-    <div class="body">
-        <p>text</p>
-    </div>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+            fixedTopGap="56">
+            <mat-nav-list>
+                <a mat-list-item routerLink="/mydashboard/getallnotes">
+                    <mat-icon class="icon-class">lightbulb</mat-icon>Notes
+                </a>
+                <a mat-list-item routerLink=".">
+                    <mat-icon class="icon-class"> notifications</mat-icon>Remainders
+                </a>
+                <a mat-list-item routerLink=".">
+                    <mat-icon class="icon-class">edit</mat-icon>Edit Labels
+                </a>
+                <a mat-list-item routerLink="/mydashboard/archieve"><img class="archieve-class"
+                        src="../../../assets/archive.png">Archieve</a>
+                <a mat-list-item routerLink="/mydashboard/gettrash">
+                    <mat-icon class="icon-class">delete</mat-icon>Trash
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
 </div>

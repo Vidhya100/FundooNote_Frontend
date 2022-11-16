@@ -8,6 +8,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -17,6 +20,7 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CreateNoteComponent } from './components/create-note/create-note.component';
 
 
 @NgModule({
@@ -26,8 +30,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     LoginComponent,
     ForgetPasswordComponent,
     ResetPasswordComponent,
-    DashboardComponent
-    
+    DashboardComponent,
+    CreateNoteComponent
     
   ],
   imports: [
@@ -40,7 +44,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     FlexLayoutModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent],

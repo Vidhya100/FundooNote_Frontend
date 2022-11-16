@@ -5,36 +5,36 @@
    //width:fit-content;
 }
 .example-container {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .example-is-mobile .example-toolbar {
-    position: fixed;
-    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-    z-index: 2;
-  }
-  
-  h1.example-app-name {
-    margin-left: 8px;
-  }
-  
-  .example-sidenav-container {
-    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
-       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
-    flex: 1;
-  }
-  
-  .example-is-mobile .example-sidenav-container {
-    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
-       `<body>` to be our scrolling element for mobile layouts. */
-    flex: 1 0 auto;
-  }
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
 
 //search
 form {
@@ -75,20 +75,8 @@ form {
     opacity: 1;
   }
 
-  hr{
-   // height: 2px;
-    margin: 0px;
-    background-color:grey;
-  }
-  .left-side{
-    padding-right: 30px;
-  }
-  .menu{
-    height:24px;
-    width:24px;
-    padding:12px;
-    margin-left: 4px;
-    margin-right: 4px;
+  .example-toolbar{
+    background-color: rgb(255, 255, 255);border :0.2px solid rgb(201, 201, 201);
   }
   .note-icon
   {
@@ -118,16 +106,16 @@ form {
   }
   
   .refresh-btn{
-    padding-left: 250px;
+  
     height:30px;
     width:27px;
     padding-top: 6px;
-    margin-right: 26px;
+   
   }
   .view-list-btn{
     height:24px;
     width:22px;
-    margin-right: 26px;
+   
     padding-top: 8px;
   }
   .settings-btn{
@@ -152,6 +140,12 @@ form {
   .left-side,.account,.middle{
     margin:0px;
   }
-  hr{
-    position:-1.5px;
+  .img1{
+    width: 30px;
+  }
+  .icon-class{
+    padding-right:20px;
+  }
+  .archieve-class{
+    padding-right:20px; width: 24px;
   }
