@@ -1,1 +1,17 @@
-<p>create-note works!</p>
+<div class="shadow" fxLayoutAlign="center center">
+    <form [formGroup]="createnoteForm" (ngSubmit)="onSubmit()">
+    <div class="container-box" fxLayout="row" fxLayoutAlign=" center">
+        
+            <div class="note" fxLayout="row">
+                <input type="text" #txt class="input" formControlName="description" placeholder="Take a note...">
+                
+            </div>
+            <div class="images" fxLayout="row" fxLayoutGap="25px">
+                <mat-icon >list</mat-icon>
+                <mat-icon>brush</mat-icon>
+                <mat-icon>image</mat-icon>
+            </div>
+       
+    </div>
+</form>
+</div>
