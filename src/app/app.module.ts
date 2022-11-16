@@ -21,6 +21,7 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
+import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { CreateNoteComponent } from './components/create-note/create-note.compon
     ForgetPasswordComponent,
     ResetPasswordComponent,
     DashboardComponent,
-    CreateNoteComponent
+    CreateNoteComponent,
+    GetAllNotesComponent
     
   ],
   imports: [
