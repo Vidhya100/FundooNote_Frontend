@@ -24,6 +24,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
 import { DisplayNoteComponent } from './components/display-note/display-note.component';
+import { IconCompComponent } from './components/icon-comp/icon-comp.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { DisplayNoteComponent } from './components/display-note/display-note.com
     DashboardComponent,
     CreateNoteComponent,
     GetAllNotesComponent,
-    DisplayNoteComponent
+    DisplayNoteComponent,
+    IconCompComponent
     
   ],
   imports: [

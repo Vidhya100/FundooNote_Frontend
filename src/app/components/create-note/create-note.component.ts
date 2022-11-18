@@ -11,6 +11,9 @@ export class CreateNoteComponent implements OnInit {
   createnoteForm !: FormGroup;
   submitted = false;
   isShow: boolean = false;
+  close:boolean = true;
+  
+
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
@@ -22,6 +25,11 @@ export class CreateNoteComponent implements OnInit {
   }
   show() {
     this.isShow = true;
+  }
+  
+  Close(){
+    this.isShow=false;
+    this.submitted=true;
   }
   onSubmit() {
     this.submitted = true;

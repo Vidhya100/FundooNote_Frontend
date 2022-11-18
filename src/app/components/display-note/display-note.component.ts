@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-display-note',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayNoteComponent implements OnInit {
 
-  constructor() { }
+  createnoteForm !: FormGroup;
+  submitted = false;
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.createnoteForm = this.formBuilder.group({
+      title: ['', Validators.required],
+      description: ['', Validators.required],
+      color: " "
+    });
   }
 
+  onSubmit() {
+    this.submitted = true;
+
+  }
 }
