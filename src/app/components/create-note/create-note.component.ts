@@ -8,19 +8,24 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CreateNoteComponent implements OnInit {
 
-  createnoteForm !:FormGroup;
+  createnoteForm !: FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder){}
+  isShow: boolean = false;
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.createnoteForm = this.formBuilder.group({
       title: ['', Validators.required],
       description: ['', Validators.required],
-      color:" "
-  });
-}
-onSubmit() {
-  this.submitted = true;
-}
+      color: " "
+    });
+  }
+  show() {
+    this.isShow = true;
+  }
+  onSubmit() {
+    this.submitted = true;
+
+  }
 
 }

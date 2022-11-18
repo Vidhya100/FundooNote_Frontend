@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +11,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
+import { DisplayNoteComponent } from './components/display-note/display-note.component';
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.c
     ResetPasswordComponent,
     DashboardComponent,
     CreateNoteComponent,
-    GetAllNotesComponent
+    GetAllNotesComponent,
+    DisplayNoteComponent
     
   ],
   imports: [
@@ -49,11 +52,13 @@ import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.c
     MatSidenavModule,
     MatIconModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [
+    NO_ERRORS_SCHEMA,
     CUSTOM_ELEMENTS_SCHEMA
   ],
 })

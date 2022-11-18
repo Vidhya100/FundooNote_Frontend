@@ -10,7 +10,7 @@
      padding: 5px 12px 5px 12px;
   }
 .input{
-    width:450px;
+    width:500px;
     padding:8px ;
     margin-bottom: 10px;
     border: none;
@@ -24,3 +24,23 @@
     padding: 16px 12px; 
     font-size: small;
 }
+.icon-container{
+    height: 35px;
+  }
+  .sub-icon-container{
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+  .img{
+    width: 16px; margin-left: 30px;
+  }
+  .img1{
+    height:25px;
+    width:25px;
+  }
+  .closebutton{
+    font-size: 14px;
+    border:transparent;
+
+    background-color: transparent;
+  }

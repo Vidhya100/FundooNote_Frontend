@@ -1,17 +1,50 @@
 <div class="shadow" fxLayoutAlign="center center">
     <form [formGroup]="createnoteForm" (ngSubmit)="onSubmit()">
-    <div class="container-box" fxLayout="row" fxLayoutAlign=" center">
-        
+        <div class="container-box" fxLayout="row" fxLayoutAlign=" center">
+
             <div class="note" fxLayout="row">
-                <input type="text" #txt class="input" formControlName="description" placeholder="Take a note...">
-                
+
+                <input type="text" class="input" *ngIf="!show"
+                    placeholder="Take a note...">
+
             </div>
             <div class="images" fxLayout="row" fxLayoutGap="25px">
-                <mat-icon >list</mat-icon>
+                <mat-icon>check_box</mat-icon>
                 <mat-icon>brush</mat-icon>
                 <mat-icon>image</mat-icon>
             </div>
-       
+
+        </div>
+    </form>
+</div>
+<div *ngIf="!show">
+    <div class="shadow" fxLayoutAlign="center center">
+        <div class="container-box" fxLayout="row" fxLayoutAlign=" center">
+            <form [formGroup]="createnoteForm" (ngSubmit)="onSubmit()">
+
+                <div class="title-class">
+
+                    <input type="text" class="input" formControlName="title" placeholder="Title">
+                    <img class="img" src="../../../assets/pin.png">
+                </div>
+                <div class="note">
+                    <input type="text" #txt class="input" placeholder="Take a note...">
+                </div>
+                <div class="icon-container" fxLayout="row" fxLayoutAlign="space-between center">
+                    <div class="sub-icon-container" fxLayout="row" fxLayoutGap="30px">
+                        <mat-icon>add_alert</mat-icon>
+                        <mat-icon>person_add</mat-icon>
+                        <mat-icon>palette</mat-icon>
+                        <mat-icon>image</mat-icon>
+                        <img class="img1" src="../../../assets/archive.png">
+                        <img class="img1" src="../../../assets/more.png">
+                    </div>
+                    <div>
+                        <button mat-button class="closebutton">Close</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
     </div>
-</form>
 </div>
