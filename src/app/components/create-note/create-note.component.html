@@ -5,7 +5,7 @@
 
                 <div class="note" fxLayout="row">
 
-                    <input type="text" class="input" (click)="show()" placeholder="Take a note...">
+                    <input type="text" class="input" formControlName="title" (click)="show()" placeholder="Take a note...">
 
                 </div>
                 <div class="images" fxLayout="row" fxLayoutGap="25px" >
@@ -24,11 +24,11 @@
 
                     <div class="title-class">
 
-                        <input type="text" class="input"  placeholder="Title">
+                        <input type="text" class="input" formControlName="title" placeholder="Title">
                         <img class="img" src="../../../assets/pin.png" >
                     </div>
                     <div class="note">
-                        <input type="text" class="input" placeholder="Take a note...">
+                        <input type="text" class="input" formControlName="description" placeholder="Take a note...">
                     </div>
                     <div class="icon-container" fxLayout="row" fxLayoutAlign="space-between center">
                         <div class="sub-icon-container" fxLayout="row" fxLayoutGap="30px">
