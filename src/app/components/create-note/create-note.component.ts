@@ -40,7 +40,15 @@ export class CreateNoteComponent implements OnInit {
     if (this.createnoteForm.valid) {
       let payload = {
         title: this.createnoteForm.value.title,
-        description: this.createnoteForm.value.description
+        description: this.createnoteForm.value.description,
+       /* "reminder": "2022-11-21T10:53:50.857Z",
+        "color": "white",
+        "image": "string",
+        "archive": true,
+        "pin": true,
+        "trash": true,
+        "created": "2022-11-21T10:53:50.857Z",
+        "edited": "2022-11-21T10:53:50.857Z"*/
         //service : "advance" 
       }
       console.log(payload)
