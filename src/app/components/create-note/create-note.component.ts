@@ -34,6 +34,7 @@ export class CreateNoteComponent implements OnInit {
     this.submitted = true;
   }
   get f() { return this.createnoteForm.controls; }
+
   onSubmit() {
     this.submitted = true;
     if (this.createnoteForm.valid) {
@@ -42,10 +43,11 @@ export class CreateNoteComponent implements OnInit {
         description: this.createnoteForm.value.description
         //service : "advance" 
       }
+      console.log(payload)
       this.note.createNote(payload).subscribe((response: any) => {
         console.log(response)
         //added for storing token locally
-        localStorage.setItem("token", response.data)
+        //localStorage.setItem("token", response.data)
       })
     }
   }

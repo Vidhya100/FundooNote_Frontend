@@ -20,7 +20,7 @@
     <div *ngIf="isShow">
         <div class="shadow" fxLayoutAlign="center center" >
             <div class="container-box" fxLayout="row" fxLayoutAlign=" center">
-                <form [formGroup]="createnoteForm" (ngSubmit)="onSubmit()">
+                <form [formGroup]="createnoteForm" >
 
                     <div class="title-class">
 
@@ -40,7 +40,7 @@
                             <img class="img1" src="../../../assets/more.png">
                         </div>
                         <div>
-                            <button mat-button class="closebutton" (click)="Close()">Close</button>
+                            <button mat-button class="closebutton" (click)="onSubmit()">Close</button>
                         </div>
                     </div>
 
