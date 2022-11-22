@@ -23,7 +23,7 @@ export class GetAllNotesComponent implements OnInit {
   getAllNotes(){
      this.noteService.getAllNotes().subscribe((request:any)=> {
       console.log("request data", request);
-      this.notesArray = request.data.data;
+      this.notesArray = request.data;
 
     })
   }

@@ -1,25 +1,25 @@
-<div class="shadow" fxLayoutAlign="center center" >
-    <div class="container-box" fxLayout="row" fxLayoutAlign=" center">
-        <form [formGroup]="createnoteForm" (ngSubmit)="onSubmit()">
-    
-            <div class="title-class">
-                <input type="text" class="input" placeholder="Title">
-                <img class="img" src="../../../assets/pin.png">
-            </div>
-            <div class="note">
-                <input type="text" class="input" placeholder="Take a note...">
-            </div>
-            <div class="icon-container" fxLayout="row" fxLayoutAlign="space-between center">
-                <div class="sub-icon-container" fxLayout="row" fxLayoutGap="30px">
-                    <mat-icon>add_alert</mat-icon>
-                    <mat-icon>person_add</mat-icon>
-                    <mat-icon>palette</mat-icon>
-                    <mat-icon>image</mat-icon>
-                    <img class="img1" src="../../../assets/archive.png">
-                    <img class="img1" src="../../../assets/more.png">
+<div class="shadow"  fxLayout="row wrap">
+    <div *ngFor="let note of NotesList">
+        <div class="container-box" fxLayout="row" >
+            
+
+            <div>
+                <div fxLayout="row" fxLayoutAlign="space-between" class="add-note-input">
+                    {{note.title}}
+                    <img class="img" src="../../../assets/pin.png">
+                </div> <br>
+                <div class="desc-class" >
+                    {{note.note}}
                 </div>
             </div>
-    
-        </form>
+
+            <div>
+                <div>
+                    <app-icon-comp></app-icon-comp>
+                </div>
+            </div>
+           
+        </div>
     </div>
 </div>
+

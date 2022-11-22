@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class DisplayNoteComponent implements OnInit {
 
-  //@Input() NotesList: any;
+  @Input() NotesList: any;
   
 
   createnoteForm !: FormGroup;
