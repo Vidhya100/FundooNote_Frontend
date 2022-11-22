@@ -1,6 +1,7 @@
 .shadow{
     margin-top: 60px;
      margin-left: 30px; 
+     
   }
 .container-box{
     width:auto; 
@@ -8,31 +9,13 @@
      border-radius: 7px; 
      box-shadow: 1px 3px 3px 3px #aaaaaa;
      padding: 5px 12px 5px 12px;
+     margin: 25px 25px 25px 25px;
   }
-.input{
-    width:500px;
-    padding:8px ;
-    margin-bottom: 10px;
-    border: none;
-    font-size: 115%;
-    outline: none;
-    background-color:rgb(252, 252, 252)
-  }
-.note{
-    height: 30px; 
-    margin-bottom: 10px;
-    padding: 16px 12px; 
-    font-size: small;
-}
 
   .img{
-    width: 16px; margin-left: 30px;
+    width: 16px; 
+    margin-left: 30px;
   }
-  .img1{
-    height:25px;
-    width:25px;
-  }
-
   
   .add-note-input {
     outline: none;
@@ -42,6 +25,7 @@
   }
   
   .desc-class{
-    margin-bottom: 10px; padding-bottom: 5px;
+    margin-bottom: 10px; 
+    padding-bottom: 5px;
   }
   
