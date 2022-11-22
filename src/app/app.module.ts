@@ -25,6 +25,7 @@ import { CreateNoteComponent } from './components/create-note/create-note.compon
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
 import { DisplayNoteComponent } from './components/display-note/display-note.component';
 import { IconCompComponent } from './components/icon-comp/icon-comp.component';
+import { AuthgaurdService } from './services/AuthgaurdService/authgaurd.service';
 
 
 @NgModule({
@@ -57,7 +58,9 @@ import { IconCompComponent } from './components/icon-comp/icon-comp.component';
     MatListModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    AuthgaurdService
+  ],
   bootstrap: [AppComponent],
   schemas: [
     NO_ERRORS_SCHEMA,

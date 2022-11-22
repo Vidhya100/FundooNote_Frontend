@@ -43,7 +43,7 @@ onSubmit() {
          //added for storing token locally
         localStorage.setItem("token",response.data)
 
-       //this.router.navigateByUrl('/dashboard/get-all-notes')
+       this.router.navigateByUrl('/dashboard/get-all-notes')
       })
   }
 }

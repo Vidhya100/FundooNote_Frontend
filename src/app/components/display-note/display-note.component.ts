@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -8,17 +8,24 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class DisplayNoteComponent implements OnInit {
 
+  //@Input() NotesList: any;
+  
+
   createnoteForm !: FormGroup;
   submitted = false;
+  
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.createnoteForm = this.formBuilder.group({
       title: ['', Validators.required],
       description: ['', Validators.required],
-      color: " "
+      
     });
   }
+
+  
+  
 
   onSubmit() {
     this.submitted = true;
