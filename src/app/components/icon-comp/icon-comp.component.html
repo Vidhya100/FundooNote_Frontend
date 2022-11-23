@@ -1,8 +1,36 @@
-<div class="sub-icon-container" fxLayout="row" fxLayoutGap="30px">
+<div class="sub-icon-container" fxLayout="row" fxLayoutGap="20px">
     <mat-icon style="color:544f4f ">add_alert</mat-icon>
     <mat-icon>person_add</mat-icon>
     <mat-icon>palette</mat-icon>
     <mat-icon>image</mat-icon>
     <img class="img1" src="../../../assets/archive.png">
-    <img class="img1" src="../../../assets/more.png">
+
+    <div class="more">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <img class="img1" src="../../../assets/more.png">
+        </button>
+        <mat-menu #menu="matMenu">
+
+              <button mat-menu-item>
+                <span>Delete Note</span>
+              </button>
+              <button mat-menu-item >
+                <span>Add  label</span>
+              </button>
+              <button mat-menu-item>
+                <span>Add drawing</span>
+              </button>
+              <button mat-menu-item>
+                <span>Make a Copy</span>
+              </button>
+              <button mat-menu-item>
+                <span>Show tick boxes</span>
+              </button>
+              <button mat-menu-item>
+                <span>Copy to Google Docs</span>
+              </button>
+              
+        </mat-menu>
+    </div>
+    
 </div>

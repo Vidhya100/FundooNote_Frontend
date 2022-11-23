@@ -12,6 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
+import {MatMenuModule} from '@angular/material/menu';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -26,6 +27,8 @@ import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.c
 import { DisplayNoteComponent } from './components/display-note/display-note.component';
 import { IconCompComponent } from './components/icon-comp/icon-comp.component';
 import { AuthgaurdService } from './services/AuthgaurdService/authgaurd.service';
+import { TrashComponent } from './components/trash/trash.component';
+import { ArchieveComponent } from './components/archieve/archieve.component';
 
 
 @NgModule({
@@ -39,7 +42,9 @@ import { AuthgaurdService } from './services/AuthgaurdService/authgaurd.service'
     CreateNoteComponent,
     GetAllNotesComponent,
     DisplayNoteComponent,
-    IconCompComponent
+    IconCompComponent,
+    TrashComponent,
+    ArchieveComponent
     
   ],
   imports: [
@@ -56,7 +61,8 @@ import { AuthgaurdService } from './services/AuthgaurdService/authgaurd.service'
     MatIconModule,
     MatToolbarModule,
     MatListModule,
-    FormsModule
+    FormsModule,
+    MatMenuModule
   ],
   providers: [
     AuthgaurdService

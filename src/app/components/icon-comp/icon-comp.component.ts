@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./icon-comp.component.scss']
 })
 export class IconCompComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  
 }
