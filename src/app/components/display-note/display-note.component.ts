@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component,  Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { UpdateNoteComponent } from '../update-note/update-note.component';
 
 @Component({
   selector: 'app-display-note',
@@ -9,26 +10,23 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class DisplayNoteComponent implements OnInit {
 
   @Input() NotesList: any;
-  
 
-  createnoteForm !: FormGroup;
-  submitted = false;
   
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.createnoteForm = this.formBuilder.group({
-      title: ['', Validators.required],
-      description: ['', Validators.required],
-      
-    });
+
   }
 
-  
-  
+  openDialog(): void {
+    this.dialog.open(UpdateNoteComponent, {
+      width: '400px',
+      height: '150px',
+      
+    });
+  }  
 
   onSubmit() {
-    this.submitted = true;
-
+    
   }
 }

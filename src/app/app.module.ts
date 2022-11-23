@@ -13,6 +13,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -29,6 +30,7 @@ import { IconCompComponent } from './components/icon-comp/icon-comp.component';
 import { AuthgaurdService } from './services/AuthgaurdService/authgaurd.service';
 import { TrashComponent } from './components/trash/trash.component';
 import { ArchieveComponent } from './components/archieve/archieve.component';
+import { UpdateNoteComponent } from './components/update-note/update-note.component';
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { ArchieveComponent } from './components/archieve/archieve.component';
     DisplayNoteComponent,
     IconCompComponent,
     TrashComponent,
-    ArchieveComponent
+    ArchieveComponent,
+    UpdateNoteComponent
     
   ],
   imports: [
@@ -62,7 +65,8 @@ import { ArchieveComponent } from './components/archieve/archieve.component';
     MatToolbarModule,
     MatListModule,
     FormsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
   ],
   providers: [
     AuthgaurdService
