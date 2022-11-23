@@ -38,9 +38,6 @@ export class NoteServiceService {
   }
   
   updateNote(reqdata: any,noteID:any) {
-    //console.log(reqdata);
-   // console.log(this.token);
-
     let header = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
@@ -48,5 +45,16 @@ export class NoteServiceService {
       })
     }
     return this.httpService.putService('/Notes/Update?noteId='+noteID, reqdata, true, header)
+  }
+
+  deleteNote(){
+    let header = {
+      headers: new HttpHeaders({
+      
+        'Content-Type' : 'application/json' ,
+        'Authorization' :'Bearer '+this.token 
+      })
+    }
+    return this.httpService.getService('/Notes/Get', true, header)
   }
 }
