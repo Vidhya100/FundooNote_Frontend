@@ -1,1 +1,15 @@
-<p>update-note works!</p>
+<div class="note" style="overflow:hidden;">
+    <div class="title" fxLayout="row" fxLayoutAlign="space-between">
+        <input type="text" placeholder="Title"  [(ngModel)]="title">
+        <img  class="img" src="../../../assets/pin.png">
+    </div>
+    <div class="desc">
+        <input placeholder="take a note" type="text" [(ngModel)]="description">
+    </div>
+    <div class="icon-bar" fxLayout="row" fxLayoutAlign="space-between center">
+
+        <app-icon-comp></app-icon-comp>
+        <button mat-button (click)="onNoClick()" class="closebutton">Close</button>
+
+    </div>
+</div>

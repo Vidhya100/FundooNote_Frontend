@@ -1,0 +1,38 @@
+.note{
+    height:auto;
+}
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    border-width: 0px;
+    border: none;
+    outline: none;
+}
+
+.no-outline:focus {
+    outline: none;
+}
+.title{
+    padding-bottom: 5px;
+}
+.desc{
+    padding-top: 15px;
+}
+.icon-bar{
+    padding-top:25px ;
+}
+.img{
+    width: 18px; 
+    margin-left: 30px;
+  }
+  .mat-dialog-container{
+    overflow:unset;
+  }
+  .closebutton{
+    border:transparent;
+    background-color: transparent;
+    font-size: 15px;
+    color:black;
+  }

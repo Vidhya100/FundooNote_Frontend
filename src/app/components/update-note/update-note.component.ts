@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { NoteServiceService } from 'src/app/services/note-service/note-service.service';
 
 @Component({
   selector: 'app-update-note',
@@ -7,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateNoteComponent implements OnInit {
 
-  constructor() { }
+  title: any;
+  description: any;
+  noteID: any;
 
-  ngOnInit(): void {
+  constructor(private notes: NoteServiceService,
+    public dialogRef: MatDialogRef<UpdateNoteComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) {
+
   }
 
+  ngOnInit(): void {
+    console.log(this.data);
+    this.title = this.data.title;
+    this.description = this.data.description;
+    this.noteID=this.data.noteID;
+  }
+
+  onNoClick()
+  {
+    let reqdata ={ 
+      title: this.title,
+      description: this.description,
+
+    }
+    this.notes.updateNote(reqdata, this.noteID).subscribe((Response: any) => {
+      console.log(Response);
+      window.location.reload();
+    });
+    this.dialogRef.close();
+  }
 }

@@ -2,11 +2,11 @@
     <div *ngFor="let note of NotesList">
         <div class="container-box" fxLayout="row" fxLayoutAlign=" center">
             <div>
-                <div fxLayout="row" fxLayoutAlign="space-between"   (click)="openDialog()" class="add-note-input">
+                <div fxLayout="row" fxLayoutAlign="space-between"   (click)="openDialog(note)" class="add-note-input">
                     {{note.title}}
                     <img class="img" src="../../../assets/pin.png">
                 </div> <br>
-                <div class="desc-class"   (click)="openDialog()">
+                <div class="desc-class"   (click)="openDialog(note)">
                     {{note.description}}
                 </div>
                 <div>

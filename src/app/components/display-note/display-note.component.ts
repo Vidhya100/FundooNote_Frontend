@@ -18,15 +18,11 @@ export class DisplayNoteComponent implements OnInit {
 
   }
 
-  openDialog(): void {
-    this.dialog.open(UpdateNoteComponent, {
+  openDialog(note:any): void {
+   const dialogRef =  this.dialog.open(UpdateNoteComponent, {
       width: '400px',
       height: '150px',
-      
+      data: note,
     });
   }  
-
-  onSubmit() {
-    
-  }
 }
