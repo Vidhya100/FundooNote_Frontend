@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NoteServiceService } from 'src/app/services/note-service/note-service.service';
 
 @Component({
   selector: 'app-icon-comp',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./icon-comp.component.scss']
 })
 export class IconCompComponent implements OnInit {
-  
-  constructor() { }
+  @Input() noteCard: any;
+
+  isDel: boolean = false;
+
+  constructor(private note: NoteServiceService) { }
 
   ngOnInit(): void {
   }
   
+  onDelete(){
+    let reqdata = {
+      noteId: [this.noteCard.noteID],
+      isDel: true,
+    }
+    console.log(reqdata);
+    this.note.trashNote(reqdata).subscribe((response: any) => {
+
+    })
+  }
 }

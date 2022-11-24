@@ -31,11 +31,11 @@ export class UpdateNoteComponent implements OnInit {
     let reqdata ={ 
       title: this.title,
       description: this.description,
-
+      noteId : this.noteID
     }
-    this.notes.updateNote(reqdata, this.noteID).subscribe((Response: any) => {
+    this.notes.updateNote(reqdata).subscribe((Response: any) => {
       console.log(Response);
-      window.location.reload();
+      //window.location.reload();
     });
     this.dialogRef.close();
   }

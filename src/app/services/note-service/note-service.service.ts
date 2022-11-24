@@ -37,24 +37,23 @@ export class NoteServiceService {
     return this.httpService.getService('/Notes/Get', true, header)
   }
   
-  updateNote(reqdata: any,noteID:any) {
+  updateNote(reqdata: any) {
     let header = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
         'Authorization':'Bearer ' + this.token
       })
     }
-    return this.httpService.putService('/Notes/Update?noteId='+noteID, reqdata, true, header)
+    return this.httpService.putService(`/Notes/Update?noteId=${reqdata.noteId} `, reqdata, true, header)
   }
 
-  deleteNote(){
+  trashNote(reqdata: any) {
     let header = {
       headers: new HttpHeaders({
-      
-        'Content-Type' : 'application/json' ,
-        'Authorization' :'Bearer '+this.token 
+        'Content-type': 'application/json',
+        'Authorization':'Bearer ' + this.token
       })
     }
-    return this.httpService.getService('/Notes/Get', true, header)
+    return this.httpService.putService(`/Notes/Trash?noteId=${reqdata.noteId} `, reqdata, true, header)
   }
 }

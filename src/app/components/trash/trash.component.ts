@@ -13,14 +13,14 @@ export class TrashComponent implements OnInit {
   constructor(private note: NoteServiceService) { }
 
   ngOnInit(): void {
-    this.getTrash()
+    //this.getTrash()
   }
 
-  getTrash(){
+ /* getTrash(){
     this.note.getAllNotes().subscribe((request:any)=> {
      console.log("request data", request);
      this.notesArray = request.data;
 
    })
-}
+}*/
 }
