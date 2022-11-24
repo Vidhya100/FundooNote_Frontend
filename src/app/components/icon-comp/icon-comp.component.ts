@@ -23,7 +23,17 @@ export class IconCompComponent implements OnInit {
     }
     console.log(reqdata);
     this.note.trashNote(reqdata).subscribe((response: any) => {
+      console.log(response)
+    })
+  }
+  onArchieve(){
+    let reqdata = {
+      noteId: [this.noteCard.noteID],
 
+    }
+    console.log(reqdata);
+    this.note.ArchieveNote(reqdata).subscribe((response: any) => {
+      console.log(response)
     })
   }
 }

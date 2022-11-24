@@ -56,4 +56,14 @@ export class NoteServiceService {
     }
     return this.httpService.putService(`/Notes/Trash?noteId=${reqdata.noteId} `, reqdata, true, header)
   }
+
+  ArchieveNote(reqdata: any) {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization':'Bearer ' + this.token
+      })
+    }
+    return this.httpService.putService(`/Notes/Archieve?noteId=${reqdata.noteId} `, reqdata, true, header)
+  }
 }
