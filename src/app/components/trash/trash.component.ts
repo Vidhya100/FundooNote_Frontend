@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NoteServiceService } from 'src/app/services/note-service/note-service.service';
 
 @Component({
@@ -9,18 +9,20 @@ import { NoteServiceService } from 'src/app/services/note-service/note-service.s
 export class TrashComponent implements OnInit {
   NotesList: any;
   notesArray:any;
+  
 
   constructor(private note: NoteServiceService) { }
 
   ngOnInit(): void {
-    //this.getTrash()
+    this.getTrash()
   }
 
- /* getTrash(){
+  getTrash(){
+    
     this.note.getAllNotes().subscribe((request:any)=> {
      console.log("request data", request);
      this.notesArray = request.data;
 
    })
-}*/
+}
 }

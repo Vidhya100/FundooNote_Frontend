@@ -37,12 +37,17 @@
 
     <div class="example-sidenav-container" fxLayout="row" fxLayoutGap="20px" >
         <div class="note1" fxLayout="column" fxLayoutGap="20px" >
-            <img type="image" src="../../../assets/bulb.png" height="28px" width="28px" >
+            <a routerLink="/dashboard/get-all-notes">
+                <img type="image" src="../../../assets/bulb.png" height="28px" width="28px" >
+            </a>
             <img type="image" src="../../../assets/ghnti.png" height="28px" width="28px">
             <img type="image" src="../../../assets/editLabel.png" height="28px" width="28px">
-            <img type="image" src="../../../assets/archive.png" height="28px" width="28px">
-            <img type="image" src="../../../assets/trash.png" height="28px" width="28px">
-
+            <a routerLink="/dashboard/archieve">
+                <img type="image" src="../../../assets/archive.png" height="28px" width="28px">
+            </a>
+            <a routerLink="/dashboard/gettrash">
+                <img type="image" src="../../../assets/trash.png" height="28px" width="28px">
+            </a>
 
         </div>
         <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
