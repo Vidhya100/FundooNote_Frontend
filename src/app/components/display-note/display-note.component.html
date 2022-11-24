@@ -1,19 +1,20 @@
 <div class="shadow" fxLayout="row wrap">
     <div *ngFor="let note of NotesList">
-        <div class="container-box" fxLayout="row" fxLayoutAlign=" center">
-            <div>
-                <div fxLayout="row" fxLayoutAlign="space-between"   (click)="openDialog(note)" class="add-note-input">
-                    {{note.title}}
-                    <img class="img" src="../../../assets/pin.png">
-                </div> <br>
-                <div class="desc-class"   (click)="openDialog(note)">
-                    {{note.description}}
-                </div>
+        <mat-card [style.background]="note.color">
+            <div class="container-box" fxLayout="row" fxLayoutAlign=" center">
                 <div>
-                    <app-icon-comp [noteCard]="note"></app-icon-comp>
+                    <div fxLayout="row" fxLayoutAlign="space-between" (click)="openDialog(note)" class="add-note-input">
+                        {{note.title}}
+                        <img class="img" src="../../../assets/pin.png">
+                    </div> <br>
+                    <div class="desc-class" (click)="openDialog(note)">
+                        {{note.description}}
+                    </div>
+                    <div>
+                        <app-icon-comp [noteCard]="note"></app-icon-comp>
+                    </div>
                 </div>
-            </div>           
-        </div>
+            </div>
+        </mat-card>
     </div>
 </div>
-

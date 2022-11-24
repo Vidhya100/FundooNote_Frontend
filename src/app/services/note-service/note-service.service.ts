@@ -66,4 +66,14 @@ export class NoteServiceService {
     }
     return this.httpService.putService(`/Notes/Archieve?noteId=${reqdata.noteId} `, reqdata, true, header)
   }
+
+  changeNoteColor(reqdata: any) {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization':'Bearer ' + this.token
+      })
+    }
+    return this.httpService.putService(`Notes/Color?noteId=${reqdata.noteId}&color=${reqdata.color} `, reqdata, true, header)
+  }
 }
