@@ -1,8 +1,8 @@
 <div class="shadow" fxLayout="row wrap">
     <div *ngFor="let note of NotesList">
-        <mat-card [style.background]="note.color">
-            <div class="container-box" fxLayout="row" fxLayoutAlign=" center">
-                <div>
+        
+            <div class="container-box" fxLayout="row" fxLayoutAlign=" center" [style.background]="note.color">
+                <div >
                     <div fxLayout="row" fxLayoutAlign="space-between" (click)="openDialog(note)" class="add-note-input">
                         {{note.title}}
                         <img class="img" src="../../../assets/pin.png">
@@ -15,6 +15,6 @@
                     </div>
                 </div>
             </div>
-        </mat-card>
+        
     </div>
 </div>

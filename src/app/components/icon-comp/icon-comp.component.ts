@@ -1,3 +1,4 @@
+import { CloseScrollStrategy } from '@angular/cdk/overlay';
 import { Component, Input, OnInit } from '@angular/core';
 import { NoteServiceService } from 'src/app/services/note-service/note-service.service';
 
@@ -11,7 +12,8 @@ export class IconCompComponent implements OnInit {
 
   isDel: boolean = false;
 
-  colorArray =[{code:"#ffff00", name:"yellow"},
+  colors: Array<any> =[
+  {code:"#ffff00", name:"yellow"},
   {code:"#00ff00", name:"green"},
   {code:"#00ffff", name:"cyan"},
   {code:"#4a86e8", name:"cornflower blue"},
@@ -22,7 +24,8 @@ export class IconCompComponent implements OnInit {
   {code:"	#fce5cd", name:"light orange 3"},
   {code:"	#ffe599", name:"light yellow 2"},
   {code:"#f1c232", name:"dark yellow 1"},
-  {code:"#93c47d", name:"light green 1"}];
+  {code:"#93c47d", name:"light green 1"}
+];
 
   constructor(private note: NoteServiceService) { }
 
@@ -51,13 +54,18 @@ export class IconCompComponent implements OnInit {
   }
 
   setColor(color: any) {
+
+   // console.log('color', color);
+    //console.log(this.noteCard);
+
     this.noteCard.color=color;
-    let reqData = {
+    //console.log('color', color);
+    let reqdata = {
       color: color,
-      noteId: [this.noteCard.noteID]
-    };
-     
-    this.note.changeNoteColor(reqData).subscribe((response: any) => {
+      noteId: [this.noteCard.noteID],
+    }
+    console.log(reqdata)
+    this.note.changeNoteColor(reqdata).subscribe((response: any) => {
       console.log(response);
 
     })

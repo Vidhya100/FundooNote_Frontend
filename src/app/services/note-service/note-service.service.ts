@@ -68,6 +68,7 @@ export class NoteServiceService {
   }
 
   changeNoteColor(reqdata: any) {
+    console.log(reqdata)
     let header = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',

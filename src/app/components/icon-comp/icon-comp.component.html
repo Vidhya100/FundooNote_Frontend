@@ -2,12 +2,12 @@
     <img class="img1" src="../../../assets/ghnti.png">
     <img class="img1" src="../../../assets/collab.png">
 
-    <img class="img1" mat-button [matMenuTriggerFor]="color" src="../../../assets/ColourPalete.png">
+    <img class="img1" mat-button [matMenuTriggerFor]="noteColor" src="../../../assets/ColourPalete.png">
 
-    <mat-menu #color="matMenu" yPosition="below">
+    <mat-menu #noteColor="matMenu" yPosition="below">
       <div class="changeColor">
-          <div *ngFor="let color of colorArray">
-            <button mat-mini-fab [style.background-color]="color?.code" (click)="setColor(color?.code)">
+          <div *ngFor="let color of colors">
+            <button class="circle" [style.background]="color?.code" (click)="setColor(color.code)">
             </button>
           </div>
       </div>
