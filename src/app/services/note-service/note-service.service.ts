@@ -75,6 +75,6 @@ export class NoteServiceService {
         'Authorization':'Bearer ' + this.token
       })
     }
-    return this.httpService.putService(`Notes/Color?noteId=${reqdata.noteId}&color=${reqdata.color} `, reqdata, true, header)
+    return this.httpService.putService(`/Notes/Color?noteId=${reqdata.noteId}&color=${reqdata.color} `, reqdata, true, header)
   }
 }

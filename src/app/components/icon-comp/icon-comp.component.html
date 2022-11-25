@@ -7,7 +7,7 @@
     <mat-menu #noteColor="matMenu" yPosition="below">
       <div class="changeColor">
           <div *ngFor="let color of colors">
-            <button class="circle" [style.background]="color?.code" (click)="setColor(color.code)">
+            <button class="circle" [style.background]="color?.name" (click)="setColor(color.name)">
             </button>
           </div>
       </div>

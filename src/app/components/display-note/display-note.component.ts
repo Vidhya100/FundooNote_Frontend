@@ -1,4 +1,4 @@
-import { Component,  Input, OnInit } from '@angular/core';
+import { Component,  EventEmitter,  Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UpdateNoteComponent } from '../update-note/update-note.component';
 
@@ -10,7 +10,8 @@ import { UpdateNoteComponent } from '../update-note/update-note.component';
 export class DisplayNoteComponent implements OnInit {
 
   @Input() NotesList: any;
-
+  msg:any;
+  @Output() messageDisplayToGetAllnotes= new EventEmitter<string>();
   
   constructor(private dialog: MatDialog) { }
 
@@ -25,4 +26,11 @@ export class DisplayNoteComponent implements OnInit {
       data: note,
     });
   }  
+  receivemessageTrashToDisplay($event:any){
+    console.log("event from icon to display",$event)
+    this.msg = $event;
+    console.log("msg",this.msg);
+
+    this.messageDisplayToGetAllnotes.emit(this.msg)
+  }
 }

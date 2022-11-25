@@ -13,18 +13,18 @@ export class IconCompComponent implements OnInit {
   isDel: boolean = false;
 
   colors: Array<any> =[
-  {code:"#ffff00", name:"yellow"},
-  {code:"#00ff00", name:"green"},
-  {code:"#00ffff", name:"cyan"},
-  {code:"#4a86e8", name:"cornflower blue"},
-  {code:"#9900ff", name:"purple"},
-  {code:"#ff00ff", name:"magneta"},
-  {code:"#e6b8af", name:"light red berry 3"},
-  {code:"#f4cccc", name:"light red 3"},
-  {code:"	#fce5cd", name:"light orange 3"},
-  {code:"	#ffe599", name:"light yellow 2"},
-  {code:"#f1c232", name:"dark yellow 1"},
-  {code:"#93c47d", name:"light green 1"}
+  { code: '#fff', name: 'white' },
+    { code: '#f28b82', name: 'red' },
+    { code: '#fbbc04', name: 'orange' },
+    { code: '#FFFF00', name: 'yellow' },
+    { code: '#ccff90', name: 'green' },
+    { code: '#a7ffeb', name: 'teal' },
+    { code: '#cbf0f8', name: 'Blue' },
+    { code: '#aecbfa', name: 'darkblue' },
+    { code: '#d7aefb', name: 'purple' },
+    { code: '#fdcfe8', name: 'pink' },
+    { code: '#e6c9a8', name: 'brown' },
+    { code: '#e8eaed', name: 'grey' },
 ];
 
   constructor(private note: NoteServiceService) { }
@@ -35,7 +35,7 @@ export class IconCompComponent implements OnInit {
   onDelete(){
     let reqdata = {
       noteId: [this.noteCard.noteID],
-      isDel: true,
+      
     }
     console.log(reqdata);
     this.note.trashNote(reqdata).subscribe((response: any) => {

@@ -11,7 +11,7 @@
                         {{note.description}}
                     </div>
                     <div>
-                        <app-icon-comp [noteCard]="note"></app-icon-comp>
+                        <app-icon-comp [noteCard]="note" (meassageTrashToDisplay)="receivemessageTrashToDisplay($event)"></app-icon-comp>
                     </div>
                 </div>
             </div>

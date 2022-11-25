@@ -9,7 +9,7 @@ import { NoteServiceService } from 'src/app/services/note-service/note-service.s
 export class TrashComponent implements OnInit {
   NotesList: any;
   notesArray:any;
-  
+  noteData:any;
 
   constructor(private note: NoteServiceService) { }
 
@@ -22,7 +22,10 @@ export class TrashComponent implements OnInit {
     this.note.getAllNotes().subscribe((request:any)=> {
      console.log("request data", request);
      this.notesArray = request.data;
-
+     this.notesArray.reverse()
+      this.notesArray = this.notesArray.filter((noteData: any) => {
+        return this.noteData.trash === true && this.noteData.archive == false;
+      })
    })
 }
 }
