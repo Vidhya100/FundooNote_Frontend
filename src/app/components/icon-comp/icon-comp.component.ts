@@ -1,5 +1,5 @@
 import { CloseScrollStrategy } from '@angular/cdk/overlay';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NoteServiceService } from 'src/app/services/note-service/note-service.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { NoteServiceService } from 'src/app/services/note-service/note-service.s
 })
 export class IconCompComponent implements OnInit {
   @Input() noteCard: any;
+  @Output() messageTrashToDisplay = new EventEmitter<string>();
 
   isDel: boolean = false;
 
@@ -40,6 +41,7 @@ export class IconCompComponent implements OnInit {
     console.log(reqdata);
     this.note.trashNote(reqdata).subscribe((response: any) => {
       console.log(response)
+      this.messageTrashToDisplay.emit(response)
     })
   }
   onArchieve(){
@@ -50,6 +52,7 @@ export class IconCompComponent implements OnInit {
     console.log(reqdata);
     this.note.ArchieveNote(reqdata).subscribe((response: any) => {
       console.log(response)
+      this.messageTrashToDisplay.emit(response)
     })
   }
 

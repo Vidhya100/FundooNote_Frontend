@@ -10,7 +10,7 @@ export class GetAllNotesComponent implements OnInit {
 
   token:any;
   notesArray:any;
-  noteData:any;
+ // noteData:any;
   message:any;
   public subscription: any;
 
@@ -25,8 +25,11 @@ export class GetAllNotesComponent implements OnInit {
       console.log("request data", request);
       this.notesArray = request.data;
       this.notesArray.reverse()
-      this.notesArray = this.notesArray.filter((noteData: any) => {
-        return this.noteData.trash === false && this.noteData.archive == false;
+      //this.notesArray = this.notesArray.filter((noteData: any) => {
+       // return this.noteData.trash == false && this.noteData.archive == false;
+       this.notesArray = this.notesArray.filter((notedata: any) => {
+        return notedata.trash == false && notedata.archive == false;
+      
       })
     })
   }
