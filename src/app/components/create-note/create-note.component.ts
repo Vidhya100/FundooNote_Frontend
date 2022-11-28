@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NoteServiceService } from 'src/app/services/note-service/note-service.service';
 import { UserService } from 'src/app/services/userServices/user.service';
@@ -9,7 +9,7 @@ import { UserService } from 'src/app/services/userServices/user.service';
   styleUrls: ['./create-note.component.scss']
 })
 export class CreateNoteComponent implements OnInit {
-
+  
   createnoteForm !: FormGroup;
   submitted = false;
   isShow: boolean = false;
@@ -17,6 +17,7 @@ export class CreateNoteComponent implements OnInit {
 
 
   constructor(private formBuilder: FormBuilder, private note: NoteServiceService) { }
+  @Output() displaytogetallNotes = new EventEmitter<string>();
 
   ngOnInit(): void {
     this.createnoteForm = this.formBuilder.group({
@@ -54,6 +55,7 @@ export class CreateNoteComponent implements OnInit {
       console.log(payload)
       this.note.createNote(payload).subscribe((response: any) => {
         console.log(response)
+        this.displaytogetallNotes.emit(response)
         //added for storing token locally
         //localStorage.setItem("token", response.data)
       })

@@ -31,7 +31,10 @@
 
         <div class="account" fxLayout="row" fxLayoutGap="15px">
             <img class="apps" src="../../../assets/apps.png">
-            <img class="acoount-image" src="../../../assets/account_circle.png">
+            <img class="acoount-image" [matMenuTriggerFor]="menu" src="../../../assets/account_circle.png">
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="onLogout()">Logout</button>
+            </mat-menu>
         </div>
     </mat-toolbar>
 

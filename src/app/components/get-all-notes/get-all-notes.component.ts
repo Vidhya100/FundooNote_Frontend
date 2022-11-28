@@ -28,10 +28,13 @@ export class GetAllNotesComponent implements OnInit {
       //this.notesArray = this.notesArray.filter((noteData: any) => {
        // return this.noteData.trash == false && this.noteData.archive == false;
        this.notesArray = this.notesArray.filter((notedata: any) => {
-        return notedata.trash == false && notedata.archive == false;
+        return notedata.trash === false && notedata.archive == false;
       
       })
     })
   }
-
+  receiveMesageFromdisplaycard($event: any){
+    console.log("Inidegetallnotes", $event);
+    this.getAllNotes();
+  }
 }

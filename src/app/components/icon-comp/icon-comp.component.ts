@@ -9,8 +9,7 @@ import { NoteServiceService } from 'src/app/services/note-service/note-service.s
 })
 export class IconCompComponent implements OnInit {
   @Input() noteCard: any;
-  @Output() messageTrashToDisplay = new EventEmitter<string>();
-
+  @Output() changeEvent = new EventEmitter<string>();
   isDel: boolean = false;
 
   colors: Array<any> =[
@@ -41,7 +40,7 @@ export class IconCompComponent implements OnInit {
     console.log(reqdata);
     this.note.trashNote(reqdata).subscribe((response: any) => {
       console.log(response)
-      this.messageTrashToDisplay.emit(response)
+      this.changeEvent.emit(response)
     })
   }
   onArchieve(){
@@ -52,7 +51,7 @@ export class IconCompComponent implements OnInit {
     console.log(reqdata);
     this.note.ArchieveNote(reqdata).subscribe((response: any) => {
       console.log(response)
-      this.messageTrashToDisplay.emit(response)
+      this.changeEvent.emit(response)
     })
   }
 

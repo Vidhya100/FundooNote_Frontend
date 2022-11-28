@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { outputAst } from '@angular/compiler';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NoteServiceService } from 'src/app/services/note-service/note-service.service';
 
 @Component({
@@ -10,6 +11,7 @@ export class TrashComponent implements OnInit {
   NotesList: any;
   notesArray:any;
   //noteData:any;
+  @Output() displaytogetallnote = new EventEmitter<string>();
 
   constructor(private note: NoteServiceService) { }
 
@@ -24,8 +26,14 @@ export class TrashComponent implements OnInit {
      this.notesArray = request.data;
      this.notesArray.reverse()
      this.notesArray = this.notesArray.filter((notedata: any) => {
-      return notedata.trash === true && notedata.archive == false;
+      return notedata.trash === true ;
       })
    })
 }
+receiveMesageFromdisplaycard($event: any){
+  console.log("Inidegetallnotes", $event);
+  this.getTrash();
 }
+}
+
+
