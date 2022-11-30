@@ -14,6 +14,7 @@ import {MatListModule} from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDialogModule, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -31,6 +32,7 @@ import { AuthgaurdService } from './services/AuthgaurdService/authgaurd.service'
 import { TrashComponent } from './components/trash/trash.component';
 import { ArchieveComponent } from './components/archieve/archieve.component';
 import { UpdateNoteComponent } from './components/update-note/update-note.component';
+import { SearchPipePipe } from './components/searchPipe/search-pipe.pipe';
 
 
 @NgModule({
@@ -47,7 +49,8 @@ import { UpdateNoteComponent } from './components/update-note/update-note.compon
     IconCompComponent,
     TrashComponent,
     ArchieveComponent,
-    UpdateNoteComponent
+    UpdateNoteComponent,
+    SearchPipePipe
     
   ],
   imports: [
@@ -66,7 +69,8 @@ import { UpdateNoteComponent } from './components/update-note/update-note.compon
     MatListModule,
     FormsModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule
   ],
   providers: [
     

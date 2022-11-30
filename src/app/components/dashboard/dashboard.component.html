@@ -19,7 +19,7 @@
             <div>
                 <form class="search-submit">
                     <button type="submit" class="search-button">Search</button>
-                    <input class="search" type="search" placeholder="Search...">
+                    <input class="search" type="search" (keyup)="searchTitle($event)" placeholder="Search...">
                 </form>
             </div>
             <div class="3-btn" fxLayout="row" fxLayoutGap="40px">

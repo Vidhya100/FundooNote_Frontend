@@ -1,50 +1,51 @@
 <div class="sub-icon-container" fxLayout="row" fxLayoutGap="20px">
-    <img class="img1" src="../../../assets/ghnti.png">
-    <img class="img1" src="../../../assets/collab.png">
+  <div ></div>
+  <img class="img1" src="../../../assets/ghnti.png">
+  <img class="img1" src="../../../assets/collab.png">
 
-    <img class="img1" mat-button [matMenuTriggerFor]="noteColor" src="../../../assets/ColourPalete.png">
+  <img class="img1" mat-button [matMenuTriggerFor]="noteColor" src="../../../assets/ColourPalete.png">
 
-    <mat-menu #noteColor="matMenu" yPosition="below">
-      <div class="changeColor">
-          <div *ngFor="let color of colors">
-            <button class="circle" [style.background]="color?.name" (click)="setColor(color.name)">
-            </button>
-          </div>
-      </div>
-    </mat-menu>
-
-    <img class="imgs" src="../../../assets/imgs.png">
-    
-    <button class="btn-grp" (click)="onArchieve()">
-      <img class="img1" src="../../../assets/archive.png">
-    </button>      
-
-    <div class="more">
-        <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-btn">
-            <img class="img1" src="../../../assets/more.png">
+  <mat-menu #noteColor="matMenu" yPosition="below">
+    <div class="changeColor">
+      <div *ngFor="let color of colors">
+        <button class="circle" [style.background]="color?.name" (click)="setColor(color.name)">
         </button>
-        <mat-menu #menu="matMenu">
-
-              <button mat-menu-item (click)="onDelete()">
-                <span>Delete Note</span>
-              </button>
-              <button mat-menu-item >
-                <span>Add  label</span>
-              </button>
-              <button mat-menu-item>
-                <span>Add drawing</span>
-              </button>
-              <button mat-menu-item>
-                <span>Make a Copy</span>
-              </button>
-              <button mat-menu-item>
-                <span>Show tick boxes</span>
-              </button>
-              <button mat-menu-item>
-                <span>Copy to Google Docs</span>
-              </button>
-
-        </mat-menu>
+      </div>
     </div>
-    
+  </mat-menu>
+
+  <img class="imgs" src="../../../assets/imgs.png">
+
+  <button class="btn-grp" (click)="onArchieve()">
+    <img class="img1" src="../../../assets/archive.png">
+  </button>
+
+  <div class="more">
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-btn">
+      <img class="img1" src="../../../assets/more.png">
+    </button>
+    <mat-menu #menu="matMenu">
+
+      <button mat-menu-item (click)="onDelete()">
+        <span>Delete Note</span>
+      </button>
+      <button mat-menu-item>
+        <span>Add label</span>
+      </button>
+      <button mat-menu-item>
+        <span>Add drawing</span>
+      </button>
+      <button mat-menu-item>
+        <span>Make a Copy</span>
+      </button>
+      <button mat-menu-item>
+        <span>Show tick boxes</span>
+      </button>
+      <button mat-menu-item>
+        <span>Copy to Google Docs</span>
+      </button>
+
+    </mat-menu>
+  </div>
+
 </div>

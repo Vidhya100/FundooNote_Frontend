@@ -1,6 +1,8 @@
 import { CloseScrollStrategy } from '@angular/cdk/overlay';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { NoteServiceService } from 'src/app/services/note-service/note-service.service';
+import { DisplayNoteComponent } from '../display-note/display-note.component';
 
 @Component({
   selector: 'app-icon-comp',
@@ -11,6 +13,10 @@ export class IconCompComponent implements OnInit {
   @Input() noteCard: any;
   @Output() changeEvent = new EventEmitter<string>();
   isDel: boolean = false;
+  durationInSeconds =5;
+  isTrash: boolean=false;
+  isArchieve: boolean=false;
+  //snackBar: any;
 
   colors: Array<any> =[
   { code: '#fff', name: 'white' },
@@ -27,7 +33,7 @@ export class IconCompComponent implements OnInit {
     { code: '#e8eaed', name: 'grey' },
 ];
 
-  constructor(private note: NoteServiceService) { }
+  constructor(private note: NoteServiceService,private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -42,6 +48,10 @@ export class IconCompComponent implements OnInit {
       console.log(response)
       this.changeEvent.emit(response)
     })
+    //this._snackBar.openFromComponent(DisplayNoteComponent, {
+    //  duration: this.durationInSeconds * 1000,
+   // })
+   let snackBarRef = this._snackBar.open('note is in trash---');
   }
   onArchieve(){
     let reqdata = {
@@ -53,6 +63,7 @@ export class IconCompComponent implements OnInit {
       console.log(response)
       this.changeEvent.emit(response)
     })
+    let snackBarRef = this._snackBar.open('note is in Archive---');
   }
 
   setColor(color: any) {

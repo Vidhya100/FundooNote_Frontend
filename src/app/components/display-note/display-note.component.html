@@ -1,5 +1,5 @@
 <div class="shadow" fxLayout="row wrap">
-    <div *ngFor="let note of NotesList">
+    <div *ngFor="let note of NotesList | searchPipe: Searchword">
         
             <div class="container-box" fxLayout="row" fxLayoutAlign=" center" [style.background]="note.color">
                 <div >
@@ -11,7 +11,7 @@
                         {{note.description}}
                     </div>
                     <div>
-                        <app-icon-comp [noteCard]="note" (changeEvent)="receivemessageTrashToDisplay($event)"></app-icon-comp>
+                        <app-icon-comp [noteCard]="note" (changeEvent)="receivemessageTrashToDisplay($event)" class="hidden"></app-icon-comp>
                     </div>
                 </div>
             </div>

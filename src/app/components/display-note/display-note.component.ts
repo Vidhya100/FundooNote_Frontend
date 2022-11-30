@@ -1,5 +1,7 @@
 import { Component,  EventEmitter,  Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { DataService } from 'src/app/services/data service/data.service';
 import { UpdateNoteComponent } from '../update-note/update-note.component';
 
 @Component({
@@ -10,13 +12,22 @@ import { UpdateNoteComponent } from '../update-note/update-note.component';
 export class DisplayNoteComponent implements OnInit {
 
   @Input() NotesList: any;
+  notesArray:any;
+  message:any;
   msg:any;
   @Output() messageDisplayToGetAllnotes= new EventEmitter<string>();
+  //@Output() keyup = new EventEmitter<string>();
+  subscription: any;
+  Searchword: any;
   
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog, private dataService : DataService) { }
 
   ngOnInit(): void {
-
+    this.dataService.searchNote.subscribe((message:any)=>{
+      this.message = message;
+      console.log(message.data[0]);
+      this.Searchword = message.data[0]
+    });
   }
 
   openDialog(note:any): void {
@@ -32,5 +43,7 @@ export class DisplayNoteComponent implements OnInit {
     console.log("msg",this.msg);
 
     this.messageDisplayToGetAllnotes.emit(this.msg)
+
+    //let snackBarRef = snackBar.open('Message archived');
   }
 }
