@@ -38,7 +38,7 @@
         </div>
     </mat-toolbar>
 
-    <div class="example-sidenav-container" fxLayout="row" fxLayoutGap="20px" >
+    <div class="example-sidenav-container" fxLayout="row"  >
         <div class="note1 " fxLayout="column" fxLayoutGap="20px" >
             <div class="hoverColor">
                 <a routerLink="/dashboard/get-all-notes">
@@ -64,16 +64,33 @@
             
 
         </div>
+        
         <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
             <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
-                fixedTopGap="56">
+                fixedTopGap="56" >
                 <mat-nav-list>
-                    <mat-list role="list" class="hide">
-                        <mat-list-item role="listitem">Notes</mat-list-item>
-                        <mat-list-item role="listitem">reminder</mat-list-item>
-                        <mat-list-item role="listitem">edit</mat-list-item>
-                        <mat-list-item role="listitem">archive</mat-list-item>
-                        <mat-list-item role="listitem">trash</mat-list-item>
+                    <mat-list role="list" class="hide" >
+                        <div>
+                            <a routerLink="/dashboard/get-all-notes">
+                                <mat-list-item role="listitem">Notes</mat-list-item>
+                            </a>                            
+                        </div>
+                        <div>
+                            <mat-list-item role="listitem">reminder</mat-list-item>
+                        </div>
+                        <div class="menu_text">
+                            <mat-list-item role="listitem" >edit</mat-list-item>
+                        </div>
+                        <div class="menu_text">
+                            <a routerLink="/dashboard/archieve">
+                                <mat-list-item role="listitem">archive</mat-list-item>
+                            </a>
+                        </div>
+                        <div class="menu_text">
+                            <a routerLink="/dashboard/gettrash">
+                                <mat-list-item role="listitem">trash</mat-list-item>
+                            </a>
+                        </div>                      
                     </mat-list>
                 </mat-nav-list>
             </mat-sidenav>
@@ -82,4 +99,5 @@
                 <router-outlet></router-outlet>
             </mat-sidenav-content>
         </mat-sidenav-container>
+    
     </div>

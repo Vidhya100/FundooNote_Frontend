@@ -29,7 +29,7 @@ h1.example-app-name {
   /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
      causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
   flex: 1;
-  padding-left: 18px;
+  
 }
 
 .example-is-mobile .example-sidenav-container {
@@ -166,6 +166,7 @@ form {
   }
   .note1{
     padding-top: 26px;
+    padding-left: 18px;
   }
   .menu{
     background-color: transparent;
@@ -190,3 +191,10 @@ form {
   .img{
     align-items: center;
   }
+  .menu_text{
+    padding-top:7px;
+  }
+  /*
+  .example-sidenav-container:hover{
+    background-color: #feefc3;
+  }*/
