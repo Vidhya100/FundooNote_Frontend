@@ -19,8 +19,8 @@ export class HttpService {
   putService(url: string, reqdata:any, token:boolean=true, httpOptions:any){
     return this.httpclient.put(this.baseUrl+url,reqdata,token && httpOptions)
   }
-  deleteService(){
-
+  deleteService(url: string, token:boolean=true, httpOptions:any){
+    return this.httpclient.delete(this.baseUrl+url,token && httpOptions)
   }
   patchService(){
 
