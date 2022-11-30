@@ -15,7 +15,7 @@
             </h1>
         </div>
 
-        <div class="middle" fxLayout="row" fxLayoutGap="200px">
+        <div class="middle" fxLayout="row" fxLayoutGap="200px">            
             <div>
                 <form class="search-submit">
                     <button type="submit" class="search-button">Search</button>
@@ -39,18 +39,29 @@
     </mat-toolbar>
 
     <div class="example-sidenav-container" fxLayout="row" fxLayoutGap="20px" >
-        <div class="note1" fxLayout="column" fxLayoutGap="20px" >
-            <a routerLink="/dashboard/get-all-notes">
-                <img type="image" src="../../../assets/bulb.png" height="28px" width="28px" >
-            </a>
-            <img type="image" src="../../../assets/ghnti.png" height="28px" width="28px">
-            <img type="image" src="../../../assets/editLabel.png" height="28px" width="28px">
-            <a routerLink="/dashboard/archieve">
-                <img type="image" src="../../../assets/archive.png" height="28px" width="28px">
-            </a>
-            <a routerLink="/dashboard/gettrash">
-                <img type="image" src="../../../assets/trash.png" height="28px" width="28px">
-            </a>
+        <div class="note1 " fxLayout="column" fxLayoutGap="20px" >
+            <div class="hoverColor">
+                <a routerLink="/dashboard/get-all-notes">
+                    <img type="image" class="img" src="../../../assets/bulb.png" height="28px" width="28px">
+                </a>
+            </div>
+            <div class="hoverColor">
+                <img type="image"  src="../../../assets/ghnti.png" height="28px" width="28px">
+            </div>
+            <div class="hoverColor">
+                <img type="image"  src="../../../assets/editLabel.png" height="28px" width="28px">
+            </div>
+            <div class="hoverColor">
+                <a routerLink="/dashboard/archieve">
+                    <img type="image"  src="../../../assets/archive.png" height="28px" width="28px">
+                </a>
+            </div>
+            <div class="hoverColor">
+                <a routerLink="/dashboard/gettrash">
+                    <img type="image"  src="../../../assets/trash.png" height="28px" width="28px">
+                </a>
+            </div>
+            
 
         </div>
         <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
