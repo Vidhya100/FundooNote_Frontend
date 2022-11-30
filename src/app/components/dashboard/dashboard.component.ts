@@ -1,8 +1,8 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
-import { DataService } from 'src/app/services/data service/data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { DataService } from 'src/app/services/dataService/data.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -31,7 +31,9 @@ export class DashboardComponent implements OnInit {
     localStorage.removeItem("token");
     this.route.navigateByUrl('/login');
 
-    let snackBarRef = this._snackBar.open('Logged out---');
+    let snackBarRef = this._snackBar.open('Logged in Successfully', 'Undo', {
+      duration: 2000
+    });;
     
   }
 

@@ -1,7 +1,6 @@
 import { Component,  EventEmitter,  Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { DataService } from 'src/app/services/data service/data.service';
+import { DataService } from 'src/app/services/dataService/data.service';
 import { UpdateNoteComponent } from '../update-note/update-note.component';
 
 @Component({

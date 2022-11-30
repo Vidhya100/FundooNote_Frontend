@@ -1,8 +1,8 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
     <mat-toolbar class="example-toolbar" flexLayout="row" fxLayoutAlign="space-between center">
         <div flexLayout="row" fxLayoutAlign="space-between center">
-            <button mat-icon-button (click)="snav.toggle()">
-                <mat-icon>menu</mat-icon>
+            <button mat-icon-button (click)="snav.toggle()" class="menu">
+               <img style="height:28p; width:28px;" src="../../../assets/menu.png">
             </button>
             <img class="project-name" src="../../../assets/note-icon.png">
             <h1 class="example-app-name">
