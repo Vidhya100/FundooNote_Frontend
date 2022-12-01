@@ -10,8 +10,8 @@
                     <div class="desc-class" (click)="openDialog(note)">
                         {{note.description}}
                     </div>
-                    <div>
-                        <app-icon-comp [noteCard]="note" (changeEvent)="receivemessageTrashToDisplay($event)" class="hidden"></app-icon-comp>
+                    <div class="hidden">
+                        <app-icon-comp [noteCard]="note" (changeEvent)="receivemessageTrashToDisplay($event)" ></app-icon-comp>
                     </div>
                 </div>
             </div>
